@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Yohanan Coffee — Ethiopian coffee, breakfast, pastries and refreshing drinks in Addis Ababa." />
+  <title>Yohanan Coffee — Buna, Breakfast & More</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="site-header" id="top">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Yohanan Coffee home">
+        <span class="brand-mark">
+          <img src="assets/yohanan-logo.jpeg" alt="Yohanan Coffee logo" style="border-radius: 50%; object-fit: cover; width: 100%; height: 100%;" />
+        </span>
+        <span class="brand-name">Yohanan <small>Coffee</small></span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+
+      <a class="nav-cta" href="#menu">View Menu</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <p class="eyebrow">Yohanan Coffee · Addis Ababa</p>
+        <h1>A warm cup.<br /><em>A beautiful moment.</em></h1>
+        <p class="hero-text">
+          Ethiopian coffee, comforting breakfasts and freshly served favorites —
+          made for slow mornings, good conversations and everyday moments.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#menu">Explore Menu</a>
+          <a class="btn btn-outline" href="#visit">Visit Yohanan</a>
+        </div>
+
+        <div class="hero-note">
+          <span class="line"></span>
+          <span>Rooted in Ethiopian coffee culture</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro section">
+      <div class="container intro-grid">
+        <div>
+          <p class="eyebrow dark">The Yohanan Experience</p>
+          <h2>From the first sip<br />to the last bite.</h2>
+        </div>
+        <p class="section-copy">
+          Yohanan Coffee brings together the character of Ethiopian buna with
+          simple, satisfying food. Come for coffee, stay for breakfast, pastries,
+          snacks and the atmosphere.
+        </p>
+      </div>
+
+      <div class="container feature-row">
+        <article class="feature-card">
+          <span class="feature-number">01</span>
+          <h3>Ethiopian Coffee</h3>
+          <p>Classic coffee favorites prepared with care and served warm.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-number">02</span>
+          <h3>Breakfast</h3>
+          <p>Familiar Ethiopian and everyday breakfast plates for a good start.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-number">03</span>
+          <h3>Fresh Moments</h3>
+          <p>Pastries, snacks and refreshing drinks for every time of day.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="menu-section section" id="menu">
+      <div class="container">
+        <div class="section-heading center">
+          <p class="eyebrow dark">What We Serve</p>
+          <h2>Our Menu</h2>
+          <p>Choose your favorite, then make yourself comfortable.</p>
+        </div>
+
+        <div class="menu-tabs" role="tablist" aria-label="Menu categories">
+          <button class="menu-tab active" data-category="breakfast">Breakfast</button>
+          <button class="menu-tab" data-category="coffee">Coffee</button>
+          <button class="menu-tab" data-category="tea">Tea</button>
+          <button class="menu-tab" data-category="soft-drinks">Soft Drinks</button>
+          <button class="menu-tab" data-category="pastries">Pastries</button>
+          <button class="menu-tab" data-category="snacks">Snacks</button>
+        </div>
+
+        <div class="menu-panel" id="menu-panel" aria-live="polite"></div>
+
+        <p class="menu-note">
+          <strong>Note:</strong> Soft drinks, pastries and snacks without listed prices are available at the café.
+          Please ask our team for today's price and availability.
+        </p>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery-section section" id="gallery">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow dark">A Taste of Yohanan</p>
+          <h2>Inside the Coffee House</h2>
+          <p>Good coffee deserves a beautiful place to enjoy it.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <button class="gallery-item gallery-large" data-full="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1400&auto=format&fit=crop" aria-label="Open coffee image">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1000&auto=format&fit=crop" alt="Fresh coffee on a table" loading="lazy" />
+          </button>
+          <button class="gallery-item" data-full="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1400&auto=format&fit=crop" aria-label="Open coffee image">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&auto=format&fit=crop" alt="Cup of coffee" loading="lazy" />
+          </button>
+          <button class="gallery-item" data-full="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?w=1400&auto=format&fit=crop" aria-label="Open coffee image">
+            <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?w=800&auto=format&fit=crop" alt="Coffee and pastry" loading="lazy" />
+          </button>
+          <button class="gallery-item" data-full="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=1400&auto=format&fit=crop" aria-label="Open café image">
+            <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=800&auto=format&fit=crop" alt="Coffee house interior" loading="lazy" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY -->
+    <section class="story section">
+      <div class="container story-grid">
+        <div class="story-image">
+          <img src="https://images.unsplash.com/photo-1524350876685-274059332603?w=1000&auto=format&fit=crop" alt="Ethiopian coffee preparation" loading="lazy" />
+          <div class="story-badge">
+            <span>ቡና</span>
+            <small>BUNA</small>
+          </div>
+        </div>
+
+        <div class="story-content">
+          <p class="eyebrow dark">Our Story</p>
+          <h2>Where coffee becomes a moment.</h2>
+          <p>
+            Yohanan Coffee celebrates the warmth, hospitality and everyday beauty
+            found around a cup of Ethiopian coffee.
+          </p>
+          <p>
+            Whether you are starting your morning with firfir, meeting a friend
+            over macchiato, or taking a quiet tea break, our table is made for you.
+          </p>
+          <a class="text-link" href="#visit">Come visit us <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISIT -->
+    <section class="visit-section section" id="visit">
+      <div class="container visit-grid">
+        <div class="visit-main">
+          <p class="eyebrow">Visit Yohanan</p>
+          <h2>Your table is waiting.</h2>
+          <p class="visit-copy">
+            Come for a cup of buna, stay for breakfast and enjoy the welcoming
+            atmosphere of Yohanan Coffee.
+          </p>
+
+          <div class="contact-list">
+            <a class="contact-item" href="tel:+251911000000">
+              <span class="contact-icon">☎</span>
+              <span><small>Call us</small>+251 911 000 000</span>
+            </a>
+            <div class="contact-item">
+              <span class="contact-icon">⌖</span>
+              <span><small>Find us</small>Bole Sub-city, Near Edna Mall<br />Addis Ababa, Ethiopia</span>
+            </div>
+            <a class="contact-item" href="mailto:hello@yohanancoffee.et">
+              <span class="contact-icon">✉</span>
+              <span><small>Email</small>hello@yohanancoffee.et</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hours-card">
+          <p class="eyebrow dark">Opening Hours</p>
+          <h3>Come in, sit down.</h3>
+          <div class="hours-row"><span>Monday – Friday</span><strong>7:00 AM – 9:00 PM</strong></div>
+          <div class="hours-row"><span>Saturday</span><strong>8:00 AM – 10:00 PM</strong></div>
+          <div class="hours-row"><span>Sunday</span><strong>9:00 AM – 8:00 PM</strong></div>
+          <div class="hours-row"><span>Public Holidays</span><strong>10:00 AM – 6:00 PM</strong></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="footer-brand" href="#home">
+        <span>Yohanan</span> Coffee
+      </a>
+      <p>© <span id="year"></span> Yohanan Coffee · Addis Ababa, Ethiopia</p>
+      <a href="#top" class="back-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close gallery">×</button>
+    <img id="lightbox-image" src="" alt="" />
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
