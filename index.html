@@ -3,232 +3,867 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Yohanan Coffee — Ethiopian coffee, breakfast, pastries and refreshing drinks in Addis Ababa." />
-  <title>Yohanan Coffee — Buna, Breakfast & More</title>
+  
+  <!-- SEO Primary Meta Tags -->
+  <title>Yohanan Coffee | Authentic Ethiopian Buna, Breakfast &amp; Specialty Café — Addis Ababa</title>
+  <meta name="title" content="Yohanan Coffee | Authentic Ethiopian Buna, Breakfast &amp; Specialty Café — Addis Ababa" />
+  <meta name="description" content="Welcome to Yohanan Coffee in Bole, Addis Ababa. Savor authentic Ethiopian buna ceremonies, signature macchiatos, wholesome breakfasts (chechebsa, firfir, ful), and a warm, inviting coffeehouse atmosphere." />
+  <meta name="keywords" content="Yohanan Coffee, Addis Ababa cafe, Ethiopian buna, traditional coffee ceremony, Bole coffee shop, Ethiopian breakfast, chechebsa, macchiato Addis Ababa, specialty coffee Ethiopia" />
+  <meta name="author" content="Yohanan Coffee" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#16271a" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="restaurant.restaurant" />
+  <meta property="og:url" content="https://yohanancoffee.et/" />
+  <meta property="og:title" content="Yohanan Coffee — Authentic Buna &amp; Breakfast in Addis Ababa" />
+  <meta property="og:description" content="Handcrafted Ethiopian coffee, traditional buna ceremonies, and authentic breakfast favorites in the vibrant heart of Bole, Addis Ababa." />
+  <meta property="og:image" content="assets/gallery-interior.jpg" />
+  <meta property="og:site_name" content="Yohanan Coffee" />
+  <meta property="og:locale" content="en_US" />
 
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Yohanan Coffee — Buna, Breakfast &amp; Specialty Café" />
+  <meta name="twitter:description" content="Experience authentic Ethiopian buna ceremonies, specialty macchiatos, and comforting breakfast plates at Yohanan Coffee in Addis Ababa." />
+  <meta name="twitter:image" content="assets/gallery-interior.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/favicon.png" />
+  <link rel="shortcut icon" href="assets/favicon.png" />
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Noto+Sans+Ethiopic:wght@400;600&display=swap" rel="stylesheet" />
 
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Structured Data (JSON-LD) for Local Business / Cafe -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Yohanan Coffee",
+    "image": "assets/gallery-interior.jpg",
+    "@id": "https://yohanancoffee.et",
+    "url": "https://yohanancoffee.et",
+    "telephone": "+251911234567",
+    "priceRange": "$$",
+    "menu": "https://yohanancoffee.et/#menu",
+    "servesCuisine": ["Ethiopian", "Specialty Coffee", "Breakfast", "Pastries"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Namibia Street, Near Edna Mall & Medhanialem Cathedral, Bole Sub-City",
+      "addressLocality": "Addis Ababa",
+      "addressRegion": "Addis Ababa",
+      "postalCode": "1000",
+      "addressCountry": "ET"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 8.9984,
+      "longitude": 38.7884
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "07:00",
+        "closes": "21:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "08:00",
+        "closes": "22:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "09:00",
+        "closes": "20:00"
+      }
+    ],
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=Bole+Edna+Mall+Addis+Ababa+Ethiopia",
+    "sameAs": [
+      "https://www.instagram.com/yohanancoffee",
+      "https://www.facebook.com/yohanancoffee",
+      "https://www.tiktok.com/@yohanancoffee"
+    ]
+  }
+  </script>
 </head>
 
 <body>
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-msg">
+        <span class="pulse-dot"></span>
+        <span>Daily Buna Ceremony at <strong>10:00 AM</strong> &amp; <strong>4:00 PM</strong> · Bole, Addis Ababa</span>
+      </div>
+      <div class="top-bar-contact">
+        <a href="tel:+251911234567" class="top-phone">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.24 1.02l-2.2 2.19z"/></svg>
+          <span>+251 911 234 567</span>
+        </a>
+        <span class="bar-divider">|</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Bole+Edna+Mall+Addis+Ababa+Ethiopia" target="_blank" rel="noopener noreferrer" class="top-maps">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+          <span>Find on Map</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SITE HEADER / NAVIGATION -->
   <header class="site-header" id="top">
     <nav class="navbar container" aria-label="Main navigation">
       <a class="brand" href="#home" aria-label="Yohanan Coffee home">
         <span class="brand-mark">
-          <img src="assets/yohanan-logo.jpeg" alt="Yohanan Coffee logo" style="border-radius: 50%; object-fit: cover; width: 100%; height: 100%;" />
+          <img src="assets/favicon.png" alt="Yohanan Coffee emblem" width="46" height="46" />
         </span>
-        <span class="brand-name">Yohanan <small>Coffee</small></span>
+        <div class="brand-text">
+          <span class="brand-name">Yohanan</span>
+          <span class="brand-tag">Coffee House &amp; Kitchen</span>
+        </div>
       </a>
 
-      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
-        <span></span><span></span><span></span>
-      </button>
-
+      <!-- Desktop Nav Menu -->
       <ul class="nav-menu" id="nav-menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#visit">Visit</a></li>
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#menu" class="nav-link">Menu</a></li>
+        <li><a href="#ceremony" class="nav-link">Buna Ceremony</a></li>
+        <li><a href="#story" class="nav-link">Our Story</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#visit" class="nav-link">Visit &amp; Hours</a></li>
       </ul>
 
-      <a class="nav-cta" href="#menu">View Menu</a>
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <a class="btn btn-nav-cta" href="#menu">View Menu</a>
+        <a class="btn-phone-quick" href="tel:+251911234567" aria-label="Call Yohanan Coffee">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.24 1.02l-2.2 2.19z"/></svg>
+        </a>
+      </div>
+
+      <!-- Hamburger Button for Mobile -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
     </nav>
   </header>
 
+  <!-- MOBILE NAVIGATION DRAWER & BACKDROP -->
+  <div class="mobile-drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile menu" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="brand">
+        <span class="brand-mark">
+          <img src="assets/favicon.png" alt="Yohanan Coffee emblem" width="40" height="40" />
+        </span>
+        <div class="brand-text">
+          <span class="brand-name">Yohanan</span>
+          <span class="brand-tag">Addis Ababa</span>
+        </div>
+      </div>
+      <button class="drawer-close" id="drawer-close" aria-label="Close menu">&times;</button>
+    </div>
+
+    <ul class="mobile-nav-list">
+      <li><a href="#home" class="mobile-nav-link">Home</a></li>
+      <li><a href="#menu" class="mobile-nav-link">Our Menu</a></li>
+      <li><a href="#ceremony" class="mobile-nav-link">Buna Ceremony</a></li>
+      <li><a href="#story" class="mobile-nav-link">Our Story</a></li>
+      <li><a href="#gallery" class="mobile-nav-link">Café Gallery</a></li>
+      <li><a href="#visit" class="mobile-nav-link">Visit &amp; Contact</a></li>
+    </ul>
+
+    <div class="drawer-actions">
+      <a class="btn btn-primary btn-block" href="tel:+251911234567">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.24 1.02l-2.2 2.19z"/></svg>
+        <span>Call +251 911 234 567</span>
+      </a>
+      <a class="btn btn-outline btn-block" href="https://www.google.com/maps/search/?api=1&query=Bole+Edna+Mall+Addis+Ababa+Ethiopia" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+        <span>Open in Google Maps</span>
+      </a>
+    </div>
+
+    <!-- Mobile Social Icons Only -->
+    <div class="drawer-socials">
+      <p class="drawer-socials-title">Follow Us</p>
+      <div class="social-icons-row">
+        <a href="https://www.instagram.com/yohanancoffee" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Yohanan Coffee on Instagram" title="Instagram">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/yohanancoffee" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Yohanan Coffee on Facebook" title="Facebook">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@yohanancoffee" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Yohanan Coffee on TikTok" title="TikTok">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-1.01-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+        </a>
+      </div>
+    </div>
+  </aside>
+
   <main>
-    <!-- HERO -->
+    <!-- HERO SECTION -->
     <section class="hero" id="home">
-      <div class="hero-overlay"></div>
+      <div class="hero-backdrop">
+        <img src="assets/gallery-interior.jpg" alt="Yohanan Coffee house interior with warm atmosphere" class="hero-bg-img" />
+        <div class="hero-gradient-overlay"></div>
+      </div>
+
       <div class="hero-content container">
-        <p class="eyebrow">Yohanan Coffee · Addis Ababa</p>
-        <h1>A warm cup.<br /><em>A beautiful moment.</em></h1>
-        <p class="hero-text">
-          Ethiopian coffee, comforting breakfasts and freshly served favorites —
-          made for slow mornings, good conversations and everyday moments.
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#menu">Explore Menu</a>
-          <a class="btn btn-outline" href="#visit">Visit Yohanan</a>
+        <div class="hero-badge-wrap">
+          <span class="hero-badge">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+            Bole · Addis Ababa, Ethiopia
+          </span>
+          <span class="hero-badge-sub">Est. 2012</span>
         </div>
 
-        <div class="hero-note">
-          <span class="line"></span>
-          <span>Rooted in Ethiopian coffee culture</span>
+        <h1 class="hero-title">
+          Where Addis Meets Over<br />
+          <em>Buna &amp; Wholesome Plates.</em>
+        </h1>
+
+        <p class="hero-description">
+          Authentic Ethiopian single-origin coffee, traditional jebena buna ceremonies, 
+          and comforting breakfasts crafted with passion. Slow mornings, lively meetings, 
+          and genuine Ethiopian hospitality.
+        </p>
+
+        <div class="hero-cta-group">
+          <a class="btn btn-primary btn-lg" href="#menu">
+            <span>Explore Menu &amp; Prices</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-7.85-1.42 1.42 5.43 5.43H5v2z"/></svg>
+          </a>
+          <a class="btn btn-outline btn-lg" href="https://www.google.com/maps/search/?api=1&query=Bole+Edna+Mall+Addis+Ababa+Ethiopia" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+            <span>Get Directions</span>
+          </a>
+          <a class="btn-phone-hero" href="tel:+251911234567">
+            <span class="phone-pulse-icon">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.24 1.02l-2.2 2.19z"/></svg>
+            </span>
+            <span class="phone-hero-text">
+              <small>Call for Takeaway / Table</small>
+              <strong>+251 911 234 567</strong>
+            </span>
+          </a>
+        </div>
+
+        <!-- Hero Highlights Row -->
+        <div class="hero-perks">
+          <div class="perk-item">
+            <span class="perk-icon">☕</span>
+            <span>Single-Origin Ethiopian Buna</span>
+          </div>
+          <div class="perk-item">
+            <span class="perk-icon">🔥</span>
+            <span>Daily Traditional Ceremony</span>
+          </div>
+          <div class="perk-item">
+            <span class="perk-icon">🍳</span>
+            <span>Hot Ethiopian Breakfasts</span>
+          </div>
+          <div class="perk-item">
+            <span class="perk-icon">📶</span>
+            <span>Fast Wi-Fi &amp; Work Friendly</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- INTRO -->
+    <!-- INTRO EXPERIENCE / WHY YOHANAN -->
     <section class="intro section">
-      <div class="container intro-grid">
-        <div>
-          <p class="eyebrow dark">The Yohanan Experience</p>
-          <h2>From the first sip<br />to the last bite.</h2>
+      <div class="container">
+        <div class="intro-grid">
+          <div class="intro-heading-col">
+            <span class="eyebrow">The Yohanan Standard</span>
+            <h2>Crafted with Pride.<br />Served with Warmth.</h2>
+          </div>
+          <div class="intro-copy-col">
+            <p class="section-lead">
+              At Yohanan Coffee, every cup honors Ethiopia’s centuries-old buna heritage.
+              From slow-roasted Yirgacheffe and Sidama beans to traditional clay jebenas and 
+              steaming plates of firfir and chachabsa, we bring people together under one roof.
+            </p>
+          </div>
         </div>
-        <p class="section-copy">
-          Yohanan Coffee brings together the character of Ethiopian buna with
-          simple, satisfying food. Come for coffee, stay for breakfast, pastries,
-          snacks and the atmosphere.
-        </p>
-      </div>
 
-      <div class="container feature-row">
-        <article class="feature-card">
-          <span class="feature-number">01</span>
-          <h3>Ethiopian Coffee</h3>
-          <p>Classic coffee favorites prepared with care and served warm.</p>
-        </article>
-        <article class="feature-card">
-          <span class="feature-number">02</span>
-          <h3>Breakfast</h3>
-          <p>Familiar Ethiopian and everyday breakfast plates for a good start.</p>
-        </article>
-        <article class="feature-card">
-          <span class="feature-number">03</span>
-          <h3>Fresh Moments</h3>
-          <p>Pastries, snacks and refreshing drinks for every time of day.</p>
-        </article>
+        <div class="feature-cards-grid">
+          <article class="feature-card">
+            <div class="feature-card-header">
+              <span class="feature-number">01</span>
+              <span class="feature-tag">Specialty Buna</span>
+            </div>
+            <h3>Ethiopian Single Origins</h3>
+            <p>Directly sourced Arabica beans from Yirgacheffe, Sidama, and Guji. Roasted in small batches for distinct floral notes and velvet crema.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card-header">
+              <span class="feature-number">02</span>
+              <span class="feature-tag">Fresh Kitchen</span>
+            </div>
+            <h3>Beloved Breakfasts</h3>
+            <p>From buttery Chechebsa with pure honey to spicy Scrambled Egg Firfir and creamy Special Ful, prepared fresh upon every order.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card-header">
+              <span class="feature-number">03</span>
+              <span class="feature-tag">Daily Ceremony</span>
+            </div>
+            <h3>Cultural Ceremony</h3>
+            <p>The smell of roasting beans, fragrant frankincense, fresh green grass, and freshly popped fendisha served in traditional cini cups.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card-header">
+              <span class="feature-number">04</span>
+              <span class="feature-tag">Community Hub</span>
+            </div>
+            <h3>Addis Ambience</h3>
+            <p>Comfortable leather seating, lush indoor greenery, high-speed fiber Wi-Fi, and convenient parking in the heart of Bole.</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- MENU -->
+    <!-- MENU SECTION -->
     <section class="menu-section section" id="menu">
       <div class="container">
         <div class="section-heading center">
-          <p class="eyebrow dark">What We Serve</p>
-          <h2>Our Menu</h2>
-          <p>Choose your favorite, then make yourself comfortable.</p>
+          <span class="eyebrow">Authentic Flavors</span>
+          <h2>Our Kitchen &amp; Coffee Menu</h2>
+          <p class="section-subtitle">Prepared fresh daily with genuine Ethiopian ingredients. All prices listed in Ethiopian Birr (ETB).</p>
         </div>
 
+        <!-- Menu Filter Tabs -->
         <div class="menu-tabs" role="tablist" aria-label="Menu categories">
-          <button class="menu-tab active" data-category="breakfast">Breakfast</button>
-          <button class="menu-tab" data-category="coffee">Coffee</button>
-          <button class="menu-tab" data-category="tea">Tea</button>
-          <button class="menu-tab" data-category="soft-drinks">Soft Drinks</button>
-          <button class="menu-tab" data-category="pastries">Pastries</button>
-          <button class="menu-tab" data-category="snacks">Snacks</button>
+          <button class="menu-tab active" data-category="breakfast" role="tab" aria-selected="true">
+            <span>🍳 Breakfast (ቁርስ)</span>
+          </button>
+          <button class="menu-tab" data-category="coffee" role="tab" aria-selected="false">
+            <span>☕ Specialty Coffee (ቡና)</span>
+          </button>
+          <button class="menu-tab" data-category="tea" role="tab" aria-selected="false">
+            <span>🍵 Herbal Tea (ሻይ)</span>
+          </button>
+          <button class="menu-tab" data-category="cold-drinks" role="tab" aria-selected="false">
+            <span>🥤 Fresh Juices &amp; Drinks</span>
+          </button>
+          <button class="menu-tab" data-category="pastries" role="tab" aria-selected="false">
+            <span>🥐 Pastries &amp; Bakery</span>
+          </button>
+          <button class="menu-tab" data-category="snacks" role="tab" aria-selected="false">
+            <span>🍿 Traditional Snacks</span>
+          </button>
         </div>
 
-        <div class="menu-panel" id="menu-panel" aria-live="polite"></div>
+        <!-- Menu Grid -->
+        <div class="menu-panel" id="menu-panel" aria-live="polite">
+          <!-- Rendered dynamically by main.js -->
+        </div>
 
-        <p class="menu-note">
-          <strong>Note:</strong> Soft drinks, pastries and snacks without listed prices are available at the café.
-          Please ask our team for today's price and availability.
-        </p>
+        <!-- Menu Footer Note -->
+        <div class="menu-bottom-card">
+          <div class="menu-note-content">
+            <div class="menu-note-icon">✨</div>
+            <div>
+              <h4>Fasting (የፆም) &amp; Custom Orders</h4>
+              <p>
+                We gladly prepare vegan/fasting friendly versions of our breakfast dishes every Wednesday, Friday, and during Lent. 
+                Need catering or whole coffee beans to take home? Ask our barista team or call ahead!
+              </p>
+            </div>
+          </div>
+          <a href="tel:+251911234567" class="btn btn-primary">Call for Takeaway</a>
+        </div>
       </div>
     </section>
 
-    <!-- GALLERY -->
+    <!-- BUNA CEREMONY SECTION -->
+    <section class="ceremony-section section" id="ceremony">
+      <div class="container">
+        <div class="ceremony-grid">
+          <div class="ceremony-image-wrap">
+            <img src="assets/gallery-ceremony.jpg" alt="Traditional Ethiopian Buna ceremony in clay jebena at Yohanan Coffee" class="ceremony-img" loading="lazy" />
+            <div class="ceremony-badge">
+              <span class="amharic-text">ቡና ቁርስ</span>
+              <small>DAILY CEREMONY</small>
+            </div>
+          </div>
+
+          <div class="ceremony-content">
+            <span class="eyebrow">Ethiopian Heritage</span>
+            <h2>The Sacred Ritual of Buna.</h2>
+            <p class="ceremony-lead">
+              In Ethiopia, coffee is never just a beverage — it is a communion of conversation, hospitality, and blessing.
+            </p>
+            <p>
+              Twice every day at Yohanan Coffee, we invite guests to sit together as green coffee beans are roasted over coals, 
+              frankincense smoke perfumes the room, and freshly ground coffee brews in our black clay <em>jebena</em>.
+            </p>
+
+            <div class="ceremony-rounds">
+              <div class="round-card">
+                <span class="round-num">1</span>
+                <div>
+                  <strong>Abol (አቦል)</strong>
+                  <p>The first and boldest cup, rich in aroma and strength.</p>
+                </div>
+              </div>
+              <div class="round-card">
+                <span class="round-num">2</span>
+                <div>
+                  <strong>Tona (ቶና)</strong>
+                  <p>The second cup, smooth and deepening the conversation.</p>
+                </div>
+              </div>
+              <div class="round-card">
+                <span class="round-num">3</span>
+                <div>
+                  <strong>Baraka (በረካ)</strong>
+                  <p>The third cup, carrying blessings of peace and friendship.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="ceremony-times-box">
+              <span>🕒 <strong>Daily Ceremony Times:</strong> 10:00 AM &amp; 4:00 PM</span>
+              <small>Accompanied by warm fendisha (popcorn) and aromatic herbs.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REAL GALLERY SECTION -->
     <section class="gallery-section section" id="gallery">
       <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow dark">A Taste of Yohanan</p>
-          <h2>Inside the Coffee House</h2>
-          <p>Good coffee deserves a beautiful place to enjoy it.</p>
+        <div class="gallery-header-row">
+          <div>
+            <span class="eyebrow">Authentic Glimpse</span>
+            <h2>Moments at Yohanan</h2>
+            <p class="section-subtitle">Real moments captured inside our coffeehouse and kitchen in Addis Ababa.</p>
+          </div>
+          <div class="gallery-legend">
+            <span>Click any photo to enlarge</span>
+          </div>
         </div>
 
         <div class="gallery-grid">
-          <button class="gallery-item gallery-large" data-full="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1400&auto=format&fit=crop" aria-label="Open coffee image">
-            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1000&auto=format&fit=crop" alt="Fresh coffee on a table" loading="lazy" />
-          </button>
-          <button class="gallery-item" data-full="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1400&auto=format&fit=crop" aria-label="Open coffee image">
-            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&auto=format&fit=crop" alt="Cup of coffee" loading="lazy" />
-          </button>
-          <button class="gallery-item" data-full="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?w=1400&auto=format&fit=crop" aria-label="Open coffee image">
-            <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?w=800&auto=format&fit=crop" alt="Coffee and pastry" loading="lazy" />
-          </button>
-          <button class="gallery-item" data-full="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=1400&auto=format&fit=crop" aria-label="Open café image">
-            <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=800&auto=format&fit=crop" alt="Coffee house interior" loading="lazy" />
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- STORY -->
-    <section class="story section">
-      <div class="container story-grid">
-        <div class="story-image">
-          <img src="https://images.unsplash.com/photo-1524350876685-274059332603?w=1000&auto=format&fit=crop" alt="Ethiopian coffee preparation" loading="lazy" />
-          <div class="story-badge">
-            <span>ቡና</span>
-            <small>BUNA</small>
-          </div>
-        </div>
-
-        <div class="story-content">
-          <p class="eyebrow dark">Our Story</p>
-          <h2>Where coffee becomes a moment.</h2>
-          <p>
-            Yohanan Coffee celebrates the warmth, hospitality and everyday beauty
-            found around a cup of Ethiopian coffee.
-          </p>
-          <p>
-            Whether you are starting your morning with firfir, meeting a friend
-            over macchiato, or taking a quiet tea break, our table is made for you.
-          </p>
-          <a class="text-link" href="#visit">Come visit us <span>→</span></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- VISIT -->
-    <section class="visit-section section" id="visit">
-      <div class="container visit-grid">
-        <div class="visit-main">
-          <p class="eyebrow">Visit Yohanan</p>
-          <h2>Your table is waiting.</h2>
-          <p class="visit-copy">
-            Come for a cup of buna, stay for breakfast and enjoy the welcoming
-            atmosphere of Yohanan Coffee.
-          </p>
-
-          <div class="contact-list">
-            <a class="contact-item" href="tel:+251911000000">
-              <span class="contact-icon">☎</span>
-              <span><small>Call us</small>+251 911 000 000</span>
-            </a>
-            <div class="contact-item">
-              <span class="contact-icon">⌖</span>
-              <span><small>Find us</small>Bole Sub-city, Near Edna Mall<br />Addis Ababa, Ethiopia</span>
+          <!-- Item 1: Ceremony (Hero/Large) -->
+          <button class="gallery-card gallery-large" data-full="assets/gallery-ceremony.jpg" data-caption="Traditional Ethiopian Buna ceremony in clay jebena with frankincense and cini cups" aria-label="Enlarge Ethiopian coffee ceremony photo">
+            <div class="gallery-card-inner">
+              <img src="assets/gallery-ceremony.jpg" alt="Traditional Ethiopian coffee ceremony at Yohanan Coffee" loading="lazy" />
+              <div class="gallery-overlay">
+                <span class="gallery-zoom-icon">＋</span>
+                <div class="gallery-caption-box">
+                  <span class="gallery-tag">Buna Ceremony</span>
+                  <h3>Traditional Clay Jebena</h3>
+                  <p>Frankincense, fresh green ketema grass &amp; cini cups</p>
+                </div>
+              </div>
             </div>
-            <a class="contact-item" href="mailto:hello@yohanancoffee.et">
-              <span class="contact-icon">✉</span>
-              <span><small>Email</small>hello@yohanancoffee.et</span>
-            </a>
-          </div>
+          </button>
+
+          <!-- Item 2: Interior -->
+          <button class="gallery-card" data-full="assets/gallery-interior.jpg" data-caption="Warm ambient dining room and espresso bar at Yohanan Coffee House, Bole Addis Ababa" aria-label="Enlarge cafe interior photo">
+            <div class="gallery-card-inner">
+              <img src="assets/gallery-interior.jpg" alt="Cozy seating area and modern espresso bar at Yohanan Coffee" loading="lazy" />
+              <div class="gallery-overlay">
+                <span class="gallery-zoom-icon">＋</span>
+                <div class="gallery-caption-box">
+                  <span class="gallery-tag">The Space</span>
+                  <h3>Warm Coffeehouse Seating</h3>
+                  <p>Designed for peaceful mornings and productive meetings</p>
+                </div>
+              </div>
+            </div>
+          </button>
+
+          <!-- Item 3: Breakfast -->
+          <button class="gallery-card" data-full="assets/gallery-breakfast.jpg" data-caption="Signature Special Chechebsa with pure honey, scrambled egg firfir, warm bread, and Spris" aria-label="Enlarge Ethiopian breakfast feast photo">
+            <div class="gallery-card-inner">
+              <img src="assets/gallery-breakfast.jpg" alt="Artisanal Ethiopian breakfast with Special Chechebsa and Scrambled Egg Firfir" loading="lazy" />
+              <div class="gallery-overlay">
+                <span class="gallery-zoom-icon">＋</span>
+                <div class="gallery-caption-box">
+                  <span class="gallery-tag">Breakfast Feast</span>
+                  <h3>Special Chechebsa &amp; Firfir</h3>
+                  <p>Pure honey, spiced butter, warm bread &amp; fresh Spris</p>
+                </div>
+              </div>
+            </div>
+          </button>
+
+          <!-- Item 4: Macchiato & Popcorn -->
+          <button class="gallery-card" data-full="assets/gallery-macchiato.jpg" data-caption="Yohanan's signature layered Ethiopian Macchiato served alongside warm roasted fendisha popcorn" aria-label="Enlarge signature macchiato photo">
+            <div class="gallery-card-inner">
+              <img src="assets/gallery-macchiato.jpg" alt="Layered Ethiopian Macchiato in glass with basket of fresh popcorn" loading="lazy" />
+              <div class="gallery-overlay">
+                <span class="gallery-zoom-icon">＋</span>
+                <div class="gallery-caption-box">
+                  <span class="gallery-tag">Signature Drink</span>
+                  <h3>Layered Macchiato &amp; Fendisha</h3>
+                  <p>Velvety steamed milk with rich espresso layers</p>
+                </div>
+              </div>
+            </div>
+          </button>
+
+          <!-- Item 5: Barista -->
+          <button class="gallery-card" data-full="assets/gallery-barista.jpg" data-caption="Our skilled barista hand-crafting espresso drinks with Ethiopian single-origin beans" aria-label="Enlarge barista crafting coffee photo">
+            <div class="gallery-card-inner">
+              <img src="assets/gallery-barista.jpg" alt="Yohanan barista preparing specialty espresso at the coffee bar" loading="lazy" />
+              <div class="gallery-overlay">
+                <span class="gallery-zoom-icon">＋</span>
+                <div class="gallery-caption-box">
+                  <span class="gallery-tag">Specialty Craft</span>
+                  <h3>Artisanal Barista Bar</h3>
+                  <p>Freshly pulled single-origin Yirgacheffe &amp; Sidama roasts</p>
+                </div>
+              </div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS / GUEST EXPERIENCES -->
+    <section class="reviews-section section">
+      <div class="container">
+        <div class="section-heading center">
+          <span class="eyebrow">Guest Impressions</span>
+          <h2>Loved by Locals &amp; Travelers</h2>
+          <p class="section-subtitle">Real experiences from coffee lovers who make Yohanan their daily haven.</p>
         </div>
 
-        <div class="hours-card">
-          <p class="eyebrow dark">Opening Hours</p>
-          <h3>Come in, sit down.</h3>
-          <div class="hours-row"><span>Monday – Friday</span><strong>7:00 AM – 9:00 PM</strong></div>
-          <div class="hours-row"><span>Saturday</span><strong>8:00 AM – 10:00 PM</strong></div>
-          <div class="hours-row"><span>Sunday</span><strong>9:00 AM – 8:00 PM</strong></div>
-          <div class="hours-row"><span>Public Holidays</span><strong>10:00 AM – 6:00 PM</strong></div>
+        <div class="reviews-grid">
+          <article class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">
+              “Hands down the most balanced macchiato in Bole. The Chechebsa with honey is heavenly, and the traditional afternoon buna ceremony made me fall in love with Addis all over again.”
+            </p>
+            <div class="reviewer-meta">
+              <span class="reviewer-avatar">BT</span>
+              <div>
+                <strong>Bilen T.</strong>
+                <small>Bole Regular · Google Review</small>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">
+              “Great vibe for laptop work with strong Wi-Fi and comfortable seating. The staff remembers your order, and the egg firfir is always piping hot and deliciously seasoned.”
+            </p>
+            <div class="reviewer-meta">
+              <span class="reviewer-avatar">MK</span>
+              <div>
+                <strong>Michael K.</strong>
+                <small>Software Consultant · TripAdvisor</small>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">
+              “Whenever friends visit Ethiopia, this is the first café I bring them to. Genuine hospitality, authentic jebena buna, and fair prices right near Edna Mall.”
+            </p>
+            <div class="reviewer-meta">
+              <span class="reviewer-avatar">SY</span>
+              <div>
+                <strong>Selamawit Y.</strong>
+                <small>Addis Ababa Local Guide</small>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISIT & CONTACT SECTION WITH GOOGLE MAPS -->
+    <section class="visit-section section" id="visit">
+      <div class="container">
+        <div class="visit-grid">
+          <!-- Visit Info & Clickable Contacts -->
+          <div class="visit-main">
+            <span class="eyebrow">Find Our Table</span>
+            <h2>Come Visit Us in Bole</h2>
+            <p class="visit-copy">
+              We are located in Bole Sub-City, easily accessible near Edna Mall and Medhanialem Cathedral. 
+              Whether stopping by for your morning buna, a wholesome breakfast, or a quiet place to work, 
+              we have a warm table waiting for you.
+            </p>
+
+            <div class="contact-cards-list">
+              <!-- Phone Clickable -->
+              <a class="contact-box" href="tel:+251911234567" title="Click to call Yohanan Coffee">
+                <div class="contact-box-icon">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.24 1.02l-2.2 2.19z"/></svg>
+                </div>
+                <div class="contact-box-details">
+                  <small>Call Café Directly (Click to Call)</small>
+                  <strong>+251 911 234 567</strong>
+                  <span class="sub-contact">Secondary: +251 922 345 678</span>
+                </div>
+              </a>
+
+              <!-- Google Maps Link -->
+              <a class="contact-box" href="https://www.google.com/maps/search/?api=1&query=Bole+Edna+Mall+Addis+Ababa+Ethiopia" target="_blank" rel="noopener noreferrer" title="Open location in Google Maps">
+                <div class="contact-box-icon">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+                </div>
+                <div class="contact-box-details">
+                  <small>Address (Click for Directions)</small>
+                  <strong>Namibia Street, Near Edna Mall</strong>
+                  <span class="sub-contact">Bole Sub-City · Addis Ababa, Ethiopia</span>
+                </div>
+              </a>
+
+              <!-- Email Link -->
+              <a class="contact-box" href="mailto:hello@yohanancoffee.et" title="Send email to Yohanan Coffee">
+                <div class="contact-box-icon">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </div>
+                <div class="contact-box-details">
+                  <small>Email Inquiries</small>
+                  <strong>hello@yohanancoffee.et</strong>
+                  <span class="sub-contact">Events, orders &amp; feedback</span>
+                </div>
+              </a>
+            </div>
+
+            <!-- Amenities Badges -->
+            <div class="amenities-row">
+              <span class="amenity-pill">📶 High-Speed Wi-Fi</span>
+              <span class="amenity-pill">💳 Telebirr &amp; Cards</span>
+              <span class="amenity-pill">🚗 Convenient Parking</span>
+              <span class="amenity-pill">🌿 Cozy Ambiance</span>
+            </div>
+          </div>
+
+          <!-- Hours & Live Map Container -->
+          <div class="visit-side">
+            <!-- Opening Hours Card -->
+            <div class="hours-card">
+              <div class="hours-header">
+                <div>
+                  <span class="eyebrow dark">Opening Hours</span>
+                  <h3>Open 7 Days a Week</h3>
+                </div>
+                <span class="open-status-pill" id="live-open-status">
+                  <span class="pulse-dot"></span> Open Today
+                </span>
+              </div>
+
+              <div class="hours-list">
+                <div class="hours-row">
+                  <span>Monday – Friday</span>
+                  <strong>7:00 AM – 9:00 PM</strong>
+                </div>
+                <div class="hours-row">
+                  <span>Saturday</span>
+                  <strong>8:00 AM – 10:00 PM</strong>
+                </div>
+                <div class="hours-row">
+                  <span>Sunday</span>
+                  <strong>9:00 AM – 8:00 PM</strong>
+                </div>
+                <div class="hours-row highlight">
+                  <span>Public &amp; Religious Holidays</span>
+                  <strong>8:00 AM – 8:00 PM</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Google Maps Interactive Embed -->
+            <div class="map-card">
+              <div class="map-header">
+                <div class="map-title-row">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="var(--gold)"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+                  <span>Google Maps Location</span>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Bole+Edna+Mall+Addis+Ababa+Ethiopia" target="_blank" rel="noopener noreferrer" class="map-open-link">
+                  <span>Open in App</span>
+                  <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-7.85-1.42 1.42 5.43 5.43H5v2z"/></svg>
+                </a>
+              </div>
+              <div class="map-frame-wrapper">
+                <iframe 
+                  title="Yohanan Coffee Location on Google Maps" 
+                  src="https://maps.google.com/maps?q=Edna%20Mall%2C%20Bole%2C%20Addis%20Ababa%2C%20Ethiopia&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                  width="100%" 
+                  height="220" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- PROFESSIONAL UPDATED FOOTER -->
   <footer class="footer">
-    <div class="container footer-inner">
-      <a class="footer-brand" href="#home">
-        <span>Yohanan</span> Coffee
-      </a>
-      <p>© <span id="year"></span> Yohanan Coffee · Addis Ababa, Ethiopia</p>
-      <a href="#top" class="back-top">Back to top ↑</a>
+    <div class="container">
+      <!-- Main Footer Columns -->
+      <div class="footer-columns-grid">
+        <!-- Col 1: Brand & Bio -->
+        <div class="footer-col brand-col">
+          <a class="footer-brand" href="#top" aria-label="Yohanan Coffee">
+            <span class="brand-mark">
+              <img src="assets/favicon.png" alt="Yohanan Coffee logo" width="36" height="36" />
+            </span>
+            <span class="footer-brand-name">Yohanan <small>Coffee House</small></span>
+          </a>
+          <p class="footer-bio">
+            An artisanal Ethiopian coffee house and kitchen in Bole, Addis Ababa. 
+            Celebrating buna traditions, wholesome breakfast plates, and warm hospitality since 2012.
+          </p>
+
+          <!-- Social Media: ONLY CLICKABLE ICONS -->
+          <div class="footer-social-section">
+            <span class="footer-social-label">Connect With Us:</span>
+            <div class="social-icons-row">
+              <a href="https://www.instagram.com/yohanancoffee" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram" title="Instagram">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+              <a href="https://www.facebook.com/yohanancoffee" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook" title="Facebook">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+              </a>
+              <a href="https://www.tiktok.com/@yohanancoffee" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="TikTok" title="TikTok">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-1.01-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+              </a>
+              <a href="https://www.google.com/maps/search/?api=1&query=Bole+Edna+Mall+Addis+Ababa+Ethiopia" target="_blank" rel="noopener noreferrer" class="social-icon-btn maps-icon" aria-label="Google Maps" title="Find us on Google Maps">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Our Menu</a></li>
+            <li><a href="#ceremony">Buna Ceremony</a></li>
+            <li><a href="#story">Our Heritage</a></li>
+            <li><a href="#gallery">Café Gallery</a></li>
+            <li><a href="#visit">Visit &amp; Hours</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Clickable Contacts -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Get in Touch</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <span class="footer-icon">📞</span>
+              <div>
+                <small>Main Line (Clickable)</small>
+                <a href="tel:+251911234567" class="footer-contact-link">+251 911 234 567</a>
+              </div>
+            </li>
+            <li>
+              <span class="footer-icon">📱</span>
+              <div>
+                <small>Takeaway &amp; Orders</small>
+                <a href="tel:+251922345678" class="footer-contact-link">+251 922 345 678</a>
+              </div>
+            </li>
+            <li>
+              <span class="footer-icon">✉️</span>
+              <div>
+                <small>Email</small>
+                <a href="mailto:hello@yohanancoffee.et" class="footer-contact-link">hello@yohanancoffee.et</a>
+              </div>
+            </li>
+            <li>
+              <span class="footer-icon">📍</span>
+              <div>
+                <small>Location</small>
+                <a href="https://www.google.com/maps/search/?api=1&query=Bole+Edna+Mall+Addis+Ababa+Ethiopia" target="_blank" rel="noopener noreferrer" class="footer-contact-link">
+                  Bole, Near Edna Mall<br />Addis Ababa, Ethiopia
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Payments & Hours Summary -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Visit Yohanan</h4>
+          <p class="footer-hours-text">
+            <strong>Mon – Fri:</strong> 7:00 AM – 9:00 PM<br />
+            <strong>Saturday:</strong> 8:00 AM – 10:00 PM<br />
+            <strong>Sunday:</strong> 9:00 AM – 8:00 PM
+          </p>
+
+          <div class="payment-methods-box">
+            <span class="payment-title">Accepted Payments:</span>
+            <div class="payment-badges">
+              <span class="pay-badge telebirr">Telebirr</span>
+              <span class="pay-badge cbe">CBE Birr</span>
+              <span class="pay-badge cards">Visa / Mastercard</span>
+              <span class="pay-badge cash">Cash</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <p class="copyright-text">
+          &copy; <span id="year">2026</span> Yohanan Coffee. All rights reserved. 
+          <span class="ethiopia-badge">Brewed with pride in Addis Ababa, Ethiopia 🇪🇹</span>
+        </p>
+        <a href="#top" class="back-to-top-btn" aria-label="Back to top">
+          <span>Back to Top</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4l-8 8h6v8h4v-8h6z"/></svg>
+        </a>
+      </div>
     </div>
   </footer>
 
-  <div class="lightbox" id="lightbox" aria-hidden="true">
-    <button class="lightbox-close" aria-label="Close gallery">×</button>
-    <img id="lightbox-image" src="" alt="" />
+  <!-- GALLERY LIGHTBOX MODAL WITH FULL CONTROLS -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Photo gallery zoom">
+    <div class="lightbox-dialog">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close zoomed view">&times;</button>
+      
+      <div class="lightbox-body">
+        <button class="lightbox-arrow lightbox-prev" id="lightbox-prev" aria-label="Previous image">‹</button>
+        <div class="lightbox-figure">
+          <img id="lightbox-image" src="" alt="Enlarged gallery view" />
+          <p id="lightbox-caption" class="lightbox-caption-text"></p>
+        </div>
+        <button class="lightbox-arrow lightbox-next" id="lightbox-next" aria-label="Next image">›</button>
+      </div>
+
+      <div class="lightbox-counter" id="lightbox-counter">1 / 5</div>
+    </div>
   </div>
 
+  <!-- SCRIPTS -->
   <script src="main.js"></script>
 </body>
 </html>
