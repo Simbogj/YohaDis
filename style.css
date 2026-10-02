@@ -323,7 +323,8 @@ h3 {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: radial-gradient(circle, var(--forest-light) 0%, var(--forest-dark) 100%);
+  background: #ffffff;
+  /* background: radial-gradient(circle, var(--forest-light) 0%, var(--forest-dark) 100%); */
   border: 1.5px solid var(--gold);
   display: flex;
   align-items: center;
@@ -1797,7 +1798,11 @@ h3 {
   color: #c084fc;
   border-color: rgba(192, 132, 252, 0.4);
 }
-
+.pay-badge.ebirr {
+  background: rgba(15, 206, 56, 0.18);
+  color: #329e56;
+  border-color: rgba(45, 198, 106, 0.4);
+}
 .footer-bottom-bar {
   display: flex;
   align-items: center;

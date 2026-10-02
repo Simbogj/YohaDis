@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     breakfast: [
       {
         amharic: "እንቁላል ፍርፍር",
-        english: "Scrambled Egg Firfir",
+        english: "Scrambled Egg",
         desc: "Ethiopian scrambled eggs spiced with berbere, onions, jalapeños & tomatoes, served with warm crusty bread.",
         price: 150,
         tag: "Popular"
@@ -60,14 +60,14 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       {
         amharic: "ጨጨብሳ እስፔሻል",
-        english: "Special Chechebsa with Honey",
+        english: "Special Chechebsa",
         desc: "Warm shredded kita lavishly drizzled with pure Ethiopian highland honey and fresh ayib cottage cheese.",
         price: 200,
         tag: "Must Try"
       },
       {
         amharic: "ፖስታ በስጎ",
-        english: "Pasta with Beef Sugo",
+        english: "Pasta with Sugo",
         desc: "Al dente pasta smothered in our savory slow-cooked beef and herb tomato sauce.",
         price: 200,
         tag: ""
@@ -96,13 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ],
 
     coffee: [
-      {
-        amharic: "ማኪያቶ",
-        english: "Classic Ethiopian Macchiato",
-        desc: "Addis Ababa's pride: double-shot single-origin espresso crowned with thick, velvety steamed milk microfoam.",
-        price: 80,
-        tag: "Bestseller"
-      },
+      
       {
         amharic: "እስቲም ቡና",
         english: "Steamed Ethiopian Buna",
@@ -111,31 +105,45 @@ document.addEventListener("DOMContentLoaded", () => {
         tag: "Single Origin"
       },
       {
+        amharic: "ማኪያቶ",
+        english: "Classic Ethiopian Macchiato",
+        desc: "Addis Ababa's pride: double-shot single-origin espresso crowned with thick, velvety steamed milk microfoam.",
+        price: 80,
+        tag: "Bestseller"
+      },
+      {
         amharic: "ስፕሪስ ቡና",
         english: "Coffee Spris (Tea & Coffee)",
         desc: "The beloved Ethiopian café classic: layered spiced black tea base topped with bold espresso.",
         price: 60,
         tag: "Addis Classic"
       },
-      {
-        amharic: "የጀበና ቡና",
-        english: "Traditional Jebena Buna",
-        desc: "Slowly brewed in our authentic black clay pot, served hot with fresh roasted popcorn (fendisha).",
-        price: 70,
-        tag: "Ceremony"
+      // {
+      //   amharic: "የጀበና ቡና",
+      //   english: "Traditional Jebena Buna",
+      //   desc: "Slowly brewed in our authentic black clay pot, served hot with fresh roasted popcorn (fendisha).",
+      //   price: 70,
+      //   tag: "Ceremony"
+      // },
+          {
+        amharic: "የማሽን ቡና",
+        english: "Expresso",
+        desc: "A single shot of rich, full-bodied espresso extracted from freshly roasted Ethiopian beans.",
+        price: 60,
+        tag: "Classic"
       },
-      {
-        amharic: "ድርብ ማኪያቶ",
-        english: "Double Shot Macchiato",
-        desc: "For true coffee aficionados — double strength espresso balanced with creamy steamed foam.",
-        price: 100,
-        tag: "Extra Bold"
-      },
+      // {
+      //   amharic: "ድርብ ማኪያቶ",
+      //   english: "Double Shot Macchiato",
+      //   desc: "For true coffee aficionados — double strength espresso balanced with creamy steamed foam.",
+      //   price: 100,
+      //   tag: "Extra Bold"
+      // },
       {
         amharic: "ካፌ ላቴ",
         english: "Smooth Caffe Latte",
         desc: "Gentle espresso folded into generous warm silky milk with delicate latte art.",
-        price: 90,
+        price: 80,
         tag: ""
       }
     ],
@@ -151,7 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
       {
         amharic: "ቀሽር ሻይ",
         english: "Fresh Ginger Spiced Tea",
-        desc: "Spicy crushed ginger root infused with cloves and honey for natural warmth and vigor.",
+        desc: "Spicy crushed ginger root infused with cloves for natural warmth and vigor.",
         price: 50,
         tag: "Wellness"
       },
