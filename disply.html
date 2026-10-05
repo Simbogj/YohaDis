@@ -1,728 +1,1310 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yohanan Coffee - Menu Board</title>
-    <!-- Google Fonts -->
+
+    <title>Yohanan Coffee — TV Menu</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --primary-olive: #9EA34D;
-            /* Vibrant olive green to match logo */
-            --dark-olive: #71733F;
-            --coffee-brown: #EAE6D5;
-            --dark-espresso: #FFFFFF;
-            --bg-white: #10120B;
-            /* Deep dark green/brown */
-            --light-cream: #1B1E13;
-            --muted-desc: #A2A994;
-            --border-line: rgba(158, 163, 77, 0.2);
+            --olive: #9ea34d;
+            --olive-dark: #73783a;
+            --olive-light: #c1c77a;
+
+            --cream: #f4f0df;
+            --cream-soft: #e9e5d2;
+
+            --black: #0b0d08;
+            --black-soft: #12150d;
+            --panel: #171a11;
+
+            --white: #ffffff;
+            --muted: #aeb39a;
+
+            --line: rgba(158, 163, 77, .25);
         }
 
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
-        body,
-        html {
+        html,
+        body {
             width: 100%;
             height: 100%;
             overflow: hidden;
-            background-color: var(--bg-white);
-            font-family: 'Montserrat', sans-serif;
-            color: var(--dark-espresso);
-            -webkit-font-smoothing: antialiased;
         }
 
-        /* 16:9 Aspect Ratio Container */
-        .menu-container {
+        body {
+            background:
+                radial-gradient(circle at 15% 20%, rgba(158,163,77,.08), transparent 30%),
+                radial-gradient(circle at 85% 80%, rgba(158,163,77,.07), transparent 30%),
+                var(--black);
+
+            color: var(--cream);
+            font-family: "Montserrat", sans-serif;
+        }
+
+        /* =========================================================
+           TV SCREEN
+        ========================================================= */
+
+        .tv-screen {
             width: 100vw;
-            height: 56.25vw;
-            /* 16:9 height relative to width */
-            max-height: 100vh;
-            max-width: 177.78vh;
-            /* 16:9 width relative to height */
-            margin: auto;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 3rem 4rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            background: linear-gradient(135deg, rgba(16, 18, 11, 0.95) 0%, rgba(20, 24, 15, 0.85) 100%), url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
-            box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
+            height: 100vh;
 
-        /* Top Header Grid */
-        .header-area {
+            min-width: 900px;
+
             display: grid;
-            grid-template-columns: 1.2fr 2fr;
-            align-items: center;
-            margin-bottom: 1.5rem;
+            grid-template-rows: 15vh 1fr 8vh;
+
+            position: relative;
+            overflow: hidden;
         }
 
-        .brand-left {
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        .top-header {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+
+            padding: 1.5vh 3vw;
+
+            border-bottom: 1px solid var(--line);
+
+            background: rgba(11, 13, 8, .94);
+        }
+
+        .brand-side {
             display: flex;
             align-items: center;
-            gap: 2rem;
+            gap: 1vw;
         }
 
-        .logo-box {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border-right: 1px solid var(--border-line);
-            padding-right: 2rem;
-        }
+        .brand-logo {
+            width: 5.5vw;
+            height: 5.5vw;
 
-        .logo-img {
-            width: 85px;
-            height: 85px;
+            max-width: 82px;
+            max-height: 82px;
+
+            min-width: 58px;
+            min-height: 58px;
+
             object-fit: cover;
             border-radius: 50%;
-            border: 2px solid var(--primary-olive);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-            margin-bottom: 0.5rem;
+
+            border: 2px solid var(--olive);
+
+            background: var(--cream);
         }
 
-        .brand-name {
-            font-family: 'Cinzel', serif;
-            font-size: 1.2rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            color: var(--coffee-brown);
-            margin-top: 0.4rem;
+        .brand-text h1 {
+            font-family: "Cinzel", serif;
+            font-size: clamp(1.4rem, 2.2vw, 2.6rem);
+            letter-spacing: .18em;
+            color: var(--white);
+        }
+
+        .brand-text p {
+            margin-top: .3rem;
+
+            font-size: clamp(.55rem, .65vw, .8rem);
+            letter-spacing: .32em;
+            color: var(--olive-light);
+        }
+
+        .center-title {
             text-align: center;
-            line-height: 1.1;
         }
 
-        .brand-name span {
+        .center-title span {
             display: block;
-            color: var(--primary-olive);
-            font-size: 0.95rem;
-        }
 
-        .title-box {
-            position: relative;
-            padding-left: 0.5rem;
-        }
-
-        .title-italic {
-            font-family: 'Playfair Display', serif;
+            font-family: "Playfair Display", serif;
             font-style: italic;
-            font-size: 2.8rem;
-            color: var(--dark-espresso);
-            line-height: 0.9;
+
+            font-size: clamp(1rem, 1.4vw, 1.7rem);
+
+            color: var(--olive-light);
         }
 
-        .title-serif {
-            font-family: 'Cinzel', serif;
-            font-size: 3.2rem;
-            font-weight: 700;
-            letter-spacing: 4px;
-            color: var(--coffee-brown);
-            line-height: 1;
+        .center-title strong {
+            display: block;
+
+            margin-top: .15rem;
+
+            font-family: "Cinzel", serif;
+            font-size: clamp(1.2rem, 1.8vw, 2.2rem);
+
+            letter-spacing: .18em;
         }
 
-        .title-sub {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.75rem;
+        .header-info {
+            text-align: right;
+        }
+
+        .header-info .today {
+            font-size: clamp(.6rem, .7vw, .85rem);
+            color: var(--muted);
+            letter-spacing: .12em;
+        }
+
+        .header-info .open {
+            margin-top: .5rem;
+
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+
+            color: var(--olive-light);
+            font-size: clamp(.6rem, .7vw, .85rem);
             font-weight: 600;
-            letter-spacing: 7px;
-            color: var(--primary-olive);
-            margin-top: 0.3rem;
-            text-transform: uppercase;
         }
 
-        .header-photos {
-            display: flex;
-            justify-content: flex-end;
-            gap: 1.5rem;
+        .open-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--olive);
+            box-shadow: 0 0 12px var(--olive);
         }
 
-        .photo-card {
-            width: 240px;
-            height: 140px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            border: 2px solid var(--primary-olive);
-            position: relative;
-        }
+        /* =========================================================
+           MAIN MENU
+        ========================================================= */
 
-        .photo-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+        .menu-area {
+            min-height: 0;
 
-        /* Main Menu Content Area */
-        .menu-content {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 2.5rem;
-            flex-grow: 1;
-            margin-top: 0.5rem;
+            grid-template-columns: 1fr 1.15fr 1fr;
+            gap: 1.2vw;
+
+            padding: 1.3vh 2vw 1vh;
         }
 
         .menu-column {
+            min-width: 0;
+            min-height: 0;
+
             display: flex;
             flex-direction: column;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    rgba(255,255,255,.025),
+                    rgba(255,255,255,.008)
+                );
+
+            border: 1px solid rgba(158,163,77,.18);
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 15px 40px rgba(0,0,0,.25);
+        }
+
+        /* =========================================================
+           CATEGORY IMAGE
+        ========================================================= */
+
+        .category-image {
+            height: 17vh;
+            min-height: 100px;
+
             position: relative;
+            overflow: hidden;
+
+            flex-shrink: 0;
         }
 
-        .menu-column:not(:last-child)::after {
-            content: '';
+        .category-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            filter: brightness(.62) saturate(.85);
+
+            transition: transform .5s ease;
+        }
+
+        .menu-column:hover .category-image img {
+            transform: scale(1.04);
+        }
+
+        .category-image::after {
+            content: "";
+
             position: absolute;
-            right: -1.25rem;
-            top: 5%;
-            height: 90%;
-            width: 1px;
-            background: var(--border-line);
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    to top,
+                    var(--panel),
+                    transparent 65%
+                );
         }
 
-        /* Section Titles */
-        .main-category {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.35rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            color: var(--dark-espresso);
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-            margin-bottom: 1.2rem;
-            border-bottom: 2px solid var(--primary-olive);
-            padding-bottom: 0.4rem;
+        .category-label {
+            position: absolute;
+
+            z-index: 2;
+
+            left: 1.4vw;
+            bottom: 1.1vh;
         }
 
-        .main-category .num {
-            color: var(--primary-olive);
-        }
+        .category-label small {
+            display: block;
 
-        .subcategory-title {
-            font-family: 'Cinzel', serif;
-            font-size: 1rem;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            color: var(--primary-olive);
-            margin-top: 0.8rem;
-            margin-bottom: 0.8rem;
+            color: var(--olive-light);
+
+            font-size: clamp(.55rem, .65vw, .8rem);
+
+            font-weight: 600;
+
+            letter-spacing: .28em;
+
             text-transform: uppercase;
+
+            margin-bottom: .25rem;
         }
 
-        .subcategory-title:first-of-type {
-            margin-top: 0;
+        .category-label h2 {
+            font-family: "Cinzel", serif;
+
+            font-size: clamp(1.15rem, 1.7vw, 2rem);
+
+            letter-spacing: .08em;
+
+            color: var(--white);
         }
 
-        /* Menu Items */
-        .menu-list {
+        /* =========================================================
+           MENU LIST
+        ========================================================= */
+
+        .items {
+            flex: 1;
+
+            min-height: 0;
+
+            padding: 1vh 1.25vw;
+
             display: flex;
             flex-direction: column;
-            gap: 0.75rem;
         }
 
         .menu-item {
-            display: flex;
-            flex-direction: column;
+            flex: 1;
+
+            min-height: 0;
+
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+
+            align-items: center;
+
+            gap: 1vw;
+
+            padding: .45vh .35vw;
+
+            border-bottom: 1px solid rgba(158,163,77,.12);
         }
 
-        .item-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
+        .menu-item:last-child {
+            border-bottom: none;
         }
 
         .item-name {
-            font-size: 0.88rem;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            color: var(--dark-espresso);
-            text-transform: uppercase;
+            font-size: clamp(.8rem, 1.05vw, 1.25rem);
+
+            font-weight: 600;
+
+            color: var(--cream);
+
+            line-height: 1.15;
         }
 
-        .item-dots {
-            flex-grow: 1;
-            border-bottom: 1px dotted var(--border-line);
-            margin: 0 0.5rem;
-            position: relative;
-            top: -3px;
-        }
+        .item-description {
+            margin-top: .2rem;
 
-        .item-price {
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: var(--coffee-brown);
+            font-size: clamp(.42rem, .55vw, .68rem);
+
+            color: var(--muted);
+
+            line-height: 1.25;
+
             white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
-        .item-desc {
-            font-size: 0.7rem;
-            color: var(--muted-desc);
-            margin-top: 0.1rem;
-            font-weight: 400;
-            line-height: 1.2;
+        .price {
+            white-space: nowrap;
+
+            font-family: "Cinzel", serif;
+
+            font-size: clamp(.72rem, .95vw, 1.15rem);
+
+            font-weight: 700;
+
+            color: var(--olive-light);
+
+            background: rgba(158,163,77,.08);
+
+            border: 1px solid rgba(158,163,77,.2);
+
+            border-radius: 30px;
+
+            padding: .55vh .65vw;
         }
 
-        /* Botanical Accents */
-        .leaf-accent {
-            position: absolute;
-            opacity: 0.7;
-            pointer-events: none;
+        /* =========================================================
+           FEATURED COFFEE COLUMN
+        ========================================================= */
+
+        .coffee-column {
+            border-color: rgba(158,163,77,.38);
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(158,163,77,.07),
+                    rgba(255,255,255,.015)
+                );
         }
 
-        /* Column Images */
-        .column-image {
-            width: 100%;
-            height: 125px;
-            margin-top: auto;
-            padding-top: 1.5rem;
+        .coffee-column .category-image {
+            height: 20vh;
         }
 
-        .column-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 8px;
-            border: 2px solid var(--border-line);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        .coffee-column .item-name {
+            font-size: clamp(.9rem, 1.15vw, 1.35rem);
         }
 
-        /* Footer */
-        .footer-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            padding-top: 0.5rem;
-            font-size: 0.75rem;
-            color: var(--muted-desc);
-            font-weight: 500;
+        .coffee-column .price {
+            font-size: clamp(.78rem, 1vw, 1.25rem);
+
+            padding: .6vh .7vw;
         }
 
-        /* Controls & Clock */
-        .fullscreen-btn {
-            position: absolute;
-            top: 1.5rem;
-            right: 1.5rem;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background: var(--light-cream);
-            border: 1px solid var(--border-line);
-            color: var(--coffee-brown);
-            display: flex;
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        .footer {
+            display: grid;
+
+            grid-template-columns: 1fr auto 1fr;
+
             align-items: center;
-            justify-content: center;
+
+            padding: 0 2vw;
+
+            border-top: 1px solid var(--line);
+
+            background: #090b07;
+        }
+
+        .footer-left {
+            font-size: clamp(.55rem, .65vw, .8rem);
+
+            color: var(--muted);
+
+            letter-spacing: .1em;
+        }
+
+        .footer-left strong {
+            color: var(--olive-light);
+        }
+
+        .footer-center {
+            text-align: center;
+
+            font-family: "Playfair Display", serif;
+
+            font-style: italic;
+
+            font-size: clamp(.65rem, .8vw, 1rem);
+
+            color: var(--cream-soft);
+        }
+
+        .clock {
+            text-align: right;
+
+            font-family: "Cinzel", serif;
+
+            font-size: clamp(.8rem, 1vw, 1.2rem);
+
+            color: var(--white);
+
+            letter-spacing: .06em;
+        }
+
+        /* =========================================================
+           FULLSCREEN BUTTON
+        ========================================================= */
+
+        .fullscreen-btn {
+            position: fixed;
+
+            top: 1.5vh;
+            right: 1vw;
+
+            z-index: 50;
+
+            width: 38px;
+            height: 38px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(255,255,255,.18);
+
+            background: rgba(0,0,0,.35);
+
+            color: rgba(255,255,255,.55);
+
+            display: grid;
+            place-items: center;
+
             cursor: pointer;
-            opacity: 0.3;
-            transition: all 0.3s ease;
-            z-index: 100;
+
+            opacity: .25;
+
+            transition:
+                opacity .25s ease,
+                background .25s ease,
+                color .25s ease;
         }
 
         .fullscreen-btn:hover {
             opacity: 1;
-            transform: scale(1.05);
-            background: var(--bg-white);
+
+            background: var(--olive);
+
+            color: var(--black);
         }
 
         .fullscreen-btn svg {
-            width: 18px;
-            height: 18px;
-            fill: currentColor;
+            width: 17px;
+            height: 17px;
         }
 
-        .clock-display {
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--coffee-brown);
-            letter-spacing: 1px;
+        /* =========================================================
+           RESPONSIVE TV
+        ========================================================= */
+
+        @media (max-width: 1200px) {
+
+            .menu-area {
+                gap: .8vw;
+                padding-left: 1vw;
+                padding-right: 1vw;
+            }
+
+            .items {
+                padding-left: .8vw;
+                padding-right: .8vw;
+            }
+
+            .item-description {
+                display: none;
+            }
+
+            .brand-text p {
+                display: none;
+            }
+        }
+
+        /* =========================================================
+           VERY WIDE SCREEN
+        ========================================================= */
+
+        @media (min-aspect-ratio: 2/1) {
+
+            .category-image {
+                height: 18vh;
+            }
+
+            .coffee-column .category-image {
+                height: 21vh;
+            }
+        }
+
+        /* =========================================================
+           TRUE FULLSCREEN
+        ========================================================= */
+
+        :fullscreen {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        :-webkit-full-screen {
+            width: 100vw;
+            height: 100vh;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="menu-container">
-        <!-- Fullscreen Toggle Button -->
-        <button class="fullscreen-btn" id="fullscreenToggle" title="Toggle Fullscreen">
-            <svg id="expandIcon" viewBox="0 0 24 24">
-                <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z" />
-            </svg>
-            <svg id="collapseIcon" viewBox="0 0 24 24" style="display: none;">
-                <path d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z" />
-            </svg>
-        </button>
+    <button
+        class="fullscreen-btn"
+        id="fullscreenBtn"
+        aria-label="Toggle fullscreen"
+        title="Fullscreen">
 
-        <!-- Header Section -->
-        <header class="header-area">
-            <div class="brand-left">
-                <!-- Custom SVG Logo -->
-                <div class="logo-box">
-                    <img class="logo-img" src="assets/yohanan-logo.jpeg" alt="Yohanan Coffee Logo">
-                    <div class="brand-name">
-                        YOHANAN
-                        <span>COFFEE</span>
-                    </div>
+        <svg
+            id="expandIcon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2">
+
+            <path d="M8 3H5a2 2 0 0 0-2 2v3"/>
+            <path d="M16 3h3a2 2 0 0 1 2 2v3"/>
+            <path d="M8 21H5a2 2 0 0 1-2-2v-3"/>
+            <path d="M16 21h3a2 2 0 0 0 2-2v-3"/>
+        </svg>
+
+        <svg
+            id="collapseIcon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            style="display:none;">
+
+            <path d="M9 3v6H3"/>
+            <path d="M15 3v6h6"/>
+            <path d="M9 21v-6H3"/>
+            <path d="M15 21v-6h6"/>
+        </svg>
+    </button>
+
+
+    <main class="tv-screen">
+
+        <!-- =====================================================
+             HEADER
+        ====================================================== -->
+
+        <header class="top-header">
+
+            <div class="brand-side">
+
+                <img
+                    class="brand-logo"
+                    src="assets/yohanan-logo.jpeg"
+                    alt="Yohanan Coffee Logo">
+
+                <div class="brand-text">
+
+                    <h1>YOHANAN COFFEE</h1>
+
+                    <p>
+                        SPECIALTY COFFEE • BREAKFAST • GOOD MOMENTS
+                    </p>
+
                 </div>
 
-                <!-- Title -->
-                <div class="title-box">
-                    <div class="title-italic">Coffee</div>
-                    <div class="title-serif">MENU</div>
-                    <div class="title-sub">Yohanan Coffee</div>
-                </div>
             </div>
 
-            <div class="header-photos">
-                <div class="photo-card">
-                    <img src="https://images.unsplash.com/photo-1559525839-b184a4d698c7?auto=format&fit=crop&w=600&q=80"
-                        alt="Espresso Preparation">
-                </div>
-                <div class="photo-card">
-                    <img src="https://images.unsplash.com/photo-1497515114629-f71d768fd07c?auto=format&fit=crop&w=600&q=80"
-                        alt="Coffee Selection">
-                </div>
+
+            <div class="center-title">
+
+                <span>Welcome to</span>
+
+                <strong>OUR MENU</strong>
+
             </div>
+
+
+            <div class="header-info">
+
+                <div class="today" id="today">
+                    Loading date...
+                </div>
+
+                <div class="open">
+
+                    <span class="open-dot"></span>
+
+                    OPEN TODAY
+
+                </div>
+
+            </div>
+
         </header>
 
-        <!-- Main Content (3 Columns) -->
-        <main class="menu-content">
 
-            <!-- COLUMN 1: BREAKFAST -->
-            <section class="menu-column">
-                <h2 class="main-category"><span class="num">01 —</span> BREAKFAST</h2>
-                <div class="menu-list">
+        <!-- =====================================================
+             MENU
+        ====================================================== -->
 
-                    <div class="menu-item">
-                        <div class="item-header">
-                            <span class="item-name">Scrambled Egg</span>
-                            <span class="item-dots"></span>
-                            <span class="item-price">ETB 150</span>
-                        </div>
-                        <div class="item-desc">Fresh lightly seasoned scrambled eggs with warm bread</div>
-                    </div>
+        <section class="menu-area">
 
-                    <div class="menu-item">
-                        <div class="item-header">
-                            <span class="item-name">Egg & Meat</span>
-                            <span class="item-dots"></span>
-                            <span class="item-price">ETB 200</span>
-                        </div>
-                        <div class="item-desc">Sautéed minced beef served with fried or scrambled eggs</div>
-                    </div>
 
-                    <div class="menu-item">
-                        <div class="item-header">
-                            <span class="item-name">Egg Sandwich</span>
-                            <span class="item-dots"></span>
-                            <span class="item-price">ETB 150</span>
-                        </div>
-                        <div class="item-desc">Classic toasted sandwich filled with seasoned egg and herbs</div>
-                    </div>
+            <!-- =================================================
+                 BREAKFAST
+            ================================================== -->
 
-                    <div class="menu-item">
-                        <div class="item-header">
-                            <span class="item-name">Egg Sauce</span>
-                            <span class="item-dots"></span>
-                            <span class="item-price">ETB 150</span>
-                        </div>
-                        <div class="item-desc">Eggs cooked gently in a rich tomato, onion & spice reduction</div>
-                    </div>
+            <article class="menu-column">
 
-                    <div class="menu-item">
-                        <div class="item-header">
-                            <span class="item-name">Normal Ful</span>
-                            <span class="item-dots"></span>
-                            <span class="item-price">ETB 150</span>
-                        </div>
-                        <div class="item-desc">Fava beans mashed with Ethiopian spices, oil & fresh onions</div>
-                    </div>
+                <div class="category-image">
 
-                    <div class="menu-item">
-                        <div class="item-header">
-                            <span class="item-name">Special Ful</span>
-                            <span class="item-dots"></span>
-                            <span class="item-price">ETB 200</span>
-                        </div>
-                        <div class="item-desc">Ful topped with scrambled egg, fresh yoghurt, tomatoes & butter</div>
-                    </div>
-
-                    <div class="menu-item">
-                        <div class="item-header">
-                            <span class="item-name">Normal Chachabsa</span>
-                            <span class="item-dots"></span>
-                            <span class="item-price">ETB 150</span>
-                        </div>
-                        <div class="item-desc">Shredded flatbread tossed in spiced Ethiopian butter (Kibe) & Berbere
-                        </div>
-                    </div>
-
-                    <div class="menu-item">
-                        <div class="item-header">
-                            <span class="item-name">Special Chachabsa</span>
-                            <span class="item-dots"></span>
-                            <span class="item-price">ETB 200</span>
-                        </div>
-                        <div class="item-desc">Traditional Chachabsa enriched with fresh honey and cream</div>
-                    </div>
-
-                    <div class="menu-item">
-                        <div class="item-header">
-                            <span class="item-name">Pasta With Sauce</span>
-                            <span class="item-dots"></span>
-                            <span class="item-price">ETB 200</span>
-                        </div>
-                        <div class="item-desc">Al dente pasta served with house tomato marinara</div>
-                    </div>
-
-                </div>
-                <!-- Food Image -->
-                <div class="column-image">
-                    <img src="https://images.unsplash.com/photo-1525351484163-9bf6031f855e?auto=format&fit=crop&w=600&q=80"
+                    <img
+                        src="assets/Breakfast.jpg"
                         alt="Breakfast">
-                </div>
-            </section>
 
-            <!-- COLUMN 2: DRINKS - COFFEE & ESPRESSO -->
-            <section class="menu-column">
-                <h2 class="main-category"><span class="num">02 —</span> DRINKS</h2>
+                    <div class="category-label">
 
-                <h3 class="subcategory-title">Coffee & Espresso</h3>
-                <div class="menu-list">
+                        <small>Start Your Day</small>
 
-                    <div class="menu-item">
-                        <div class="item-header">
-                            <span class="item-name">Espresso</span>
-                            <span class="item-dots"></span>
-                            <span class="item-price">ETB 100</span>
-                        </div>
-                        <div class="item-desc">Rich and full-bodied single shot of single-origin beans</div>
-                    </div>
+                        <h2>BREAKFAST</h2>
 
-                    <div class="menu-item">
-                        <div class="item-header">
-                            <span class="item-name">Macchiato</span>
-                            <span class="item-dots"></span>
-                            <span class="item-price">ETB 120</span>
-                        </div>
-                        <div class="item-desc">Classic Ethiopian style layered espresso with foamed milk</div>
-                    </div>
-
-                    <div class="menu-item">
-                        <div class="item-header">
-                            <span class="item-name">Cappuccino</span>
-                            <span class="item-dots"></span>
-                            <span class="item-price">ETB 150</span>
-                        </div>
-                        <div class="item-desc">Equal parts espresso, steamed milk, and velvety foam</div>
-                    </div>
-
-                    <div class="menu-item">
-                        <div class="item-header">
-                            <span class="item-name">Latte</span>
-                            <span class="item-dots"></span>
-                            <span class="item-price">ETB 160</span>
-                        </div>
-                        <div class="item-desc">Smooth espresso with generous micro-textured steamed milk</div>
-                    </div>
-
-                    <div class="menu-item">
-                        <div class="item-header">
-                            <span class="item-name">Flat White</span>
-                            <span class="item-dots"></span>
-                            <span class="item-price">ETB 160</span>
-                        </div>
-                        <div class="item-desc">Double shot espresso poured under thin layer of silky foam</div>
-                    </div>
-
-                    <div class="menu-item">
-                        <div class="item-header">
-                            <span class="item-name">Mocha</span>
-                            <span class="item-dots"></span>
-                            <span class="item-price">ETB 170</span>
-                        </div>
-                        <div class="item-desc">Espresso blended with premium dark cocoa and warm milk</div>
-                    </div>
-
-                    <div class="menu-item">
-                        <div class="item-header">
-                            <span class="item-name">Americano</span>
-                            <span class="item-dots"></span>
-                            <span class="item-price">ETB 120</span>
-                        </div>
-                        <div class="item-desc">Espresso diluted with hot water for a smooth clean cup</div>
-                    </div>
-
-                </div>
-                <!-- Espresso Image -->
-                <div class="column-image">
-                    <img src="https://images.unsplash.com/photo-1529892485600-600d866a2c07?auto=format&fit=crop&w=600&q=80"
-                        alt="Latte Art">
-                </div>
-            </section>
-
-            <!-- COLUMN 3: DRINKS - TEA & SOFT DRINKS -->
-            <section class="menu-column">
-                <!-- Spacing block to align with Column 2's category header -->
-                <div style="height: 2.3rem;"></div>
-
-                <h3 class="subcategory-title">Tea Selection</h3>
-                <div class="menu-list" style="margin-bottom: 1.5rem;">
-
-                    <div class="menu-item">
-                        <div class="item-header">
-                            <span class="item-name">Ethiopian Tea</span>
-                            <span class="item-dots"></span>
-                            <span class="item-price">ETB 100</span>
-                        </div>
-                        <div class="item-desc">Traditional spiced black tea brewed with cinnamon & cloves</div>
-                    </div>
-
-                    <div class="menu-item">
-                        <div class="item-header">
-                            <span class="item-name">Lemon Tea</span>
-                            <span class="item-dots"></span>
-                            <span class="item-price">ETB 110</span>
-                        </div>
-                        <div class="item-desc">Black tea infused with fresh citrus lemon slice</div>
-                    </div>
-
-                    <div class="menu-item">
-                        <div class="item-header">
-                            <span class="item-name">Ginger Tea</span>
-                            <span class="item-dots"></span>
-                            <span class="item-price">ETB 110</span>
-                        </div>
-                        <div class="item-desc">Warming fresh crushed ginger root tea</div>
-                    </div>
-
-                    <div class="menu-item">
-                        <div class="item-header">
-                            <span class="item-name">Green Tea</span>
-                            <span class="item-dots"></span>
-                            <span class="item-price">ETB 110</span>
-                        </div>
-                        <div class="item-desc">Light and refreshing whole leaf green tea</div>
                     </div>
 
                 </div>
 
-                <h3 class="subcategory-title">Soft Drinks</h3>
-                <div class="menu-list">
+
+                <div class="items">
+
 
                     <div class="menu-item">
-                        <div class="item-header">
-                            <span class="item-name">Coca-Cola</span>
-                            <span class="item-dots"></span>
-                            <span class="item-price">ETB 80</span>
+
+                        <div>
+                            <div class="item-name">
+                                Scrambled Egg
+                            </div>
+
+                            <div class="item-description">
+                                Fresh lightly seasoned scrambled eggs with warm bread
+                            </div>
                         </div>
+
+                        <div class="price">ETB 150</div>
+
                     </div>
 
-                    <div class="menu-item">
-                        <div class="item-header">
-                            <span class="item-name">Fanta</span>
-                            <span class="item-dots"></span>
-                            <span class="item-price">ETB 80</span>
-                        </div>
-                    </div>
 
                     <div class="menu-item">
-                        <div class="item-header">
-                            <span class="item-name">Sprite</span>
-                            <span class="item-dots"></span>
-                            <span class="item-price">ETB 80</span>
+
+                        <div>
+                            <div class="item-name">
+                                Egg & Meat
+                            </div>
+
+                            <div class="item-description">
+                                Sautéed minced beef served with eggs
+                            </div>
                         </div>
+
+                        <div class="price">ETB 200</div>
+
                     </div>
 
+
                     <div class="menu-item">
-                        <div class="item-header">
-                            <span class="item-name">Bottled Water</span>
-                            <span class="item-dots"></span>
-                            <span class="item-price">ETB 60</span>
+
+                        <div>
+                            <div class="item-name">
+                                Egg Sandwich
+                            </div>
+
+                            <div class="item-description">
+                                Toasted sandwich filled with seasoned egg
+                            </div>
                         </div>
-                        <div class="item-desc">500ml still mineral water</div>
+
+                        <div class="price">ETB 150</div>
+
+                    </div>
+
+
+                    <div class="menu-item">
+
+                        <div>
+                            <div class="item-name">
+                                Egg Sauce
+                            </div>
+
+                            <div class="item-description">
+                                Eggs in rich tomato, onion & spice sauce
+                            </div>
+                        </div>
+
+                        <div class="price">ETB 150</div>
+
+                    </div>
+
+
+                    <div class="menu-item">
+
+                        <div>
+                            <div class="item-name">
+                                Normal Ful
+                            </div>
+
+                            <div class="item-description">
+                                Ethiopian spiced fava beans
+                            </div>
+                        </div>
+
+                        <div class="price">ETB 150</div>
+
+                    </div>
+
+
+                    <div class="menu-item">
+
+                        <div>
+                            <div class="item-name">
+                                Special Ful
+                            </div>
+
+                            <div class="item-description">
+                                Ful with egg, yoghurt, tomato & butter
+                            </div>
+                        </div>
+
+                        <div class="price">ETB 200</div>
+
+                    </div>
+
+
+                    <div class="menu-item">
+
+                        <div>
+                            <div class="item-name">
+                                Normal Chachabsa
+                            </div>
+
+                            <div class="item-description">
+                                Flatbread with Kibe & Berbere
+                            </div>
+                        </div>
+
+                        <div class="price">ETB 150</div>
+
+                    </div>
+
+
+                    <div class="menu-item">
+
+                        <div>
+                            <div class="item-name">
+                                Special Chachabsa
+                            </div>
+
+                            <div class="item-description">
+                                Traditional Chachabsa with honey & cream
+                            </div>
+                        </div>
+
+                        <div class="price">ETB 200</div>
+
+                    </div>
+
+
+                    <div class="menu-item">
+
+                        <div>
+                            <div class="item-name">
+                                Pasta With Sauce
+                            </div>
+
+                            <div class="item-description">
+                                Pasta served with house tomato sauce
+                            </div>
+                        </div>
+
+                        <div class="price">ETB 200</div>
+
                     </div>
 
                 </div>
-                <!-- Drink Image -->
-                <div class="column-image">
-                    <img src="https://images.unsplash.com/photo-1544787219-7f47ccb7fae6?auto=format&fit=crop&w=600&q=80"
-                        alt="Tea & Drinks">
+
+            </article>
+
+
+            <!-- =================================================
+                 COFFEE
+            ================================================== -->
+
+            <article class="menu-column coffee-column">
+
+                <div class="category-image">
+
+                    <img
+                        src="assets/maccha.png"
+                        alt="Yohanan Coffee">
+
+                    <div class="category-label">
+
+                        <small>Freshly Brewed</small>
+
+                        <h2>COFFEE</h2>
+
+                    </div>
+
                 </div>
-            </section>
 
-        </main>
 
-        <!-- Footer Bar with Clock -->
-        <footer class="footer-bar">
-            <div>
-                <span>YOHANAN COFFEE</span> &bull; <span>ALWAYS FRESH & TRADITIONAL</span>
+                <div class="items">
+
+
+                    <div class="menu-item">
+
+                        <div>
+                            <div class="item-name">
+                                Espresso
+                            </div>
+
+                            <div class="item-description">
+                                Rich and full-bodied single-origin espresso
+                            </div>
+                        </div>
+
+                        <div class="price">ETB 100</div>
+
+                    </div>
+
+
+                    <div class="menu-item">
+
+                        <div>
+                            <div class="item-name">
+                                Macchiato
+                            </div>
+
+                            <div class="item-description">
+                                Layered espresso with foamed milk
+                            </div>
+                        </div>
+
+                        <div class="price">ETB 120</div>
+
+                    </div>
+
+
+                    <div class="menu-item">
+
+                        <div>
+                            <div class="item-name">
+                                Cappuccino
+                            </div>
+
+                            <div class="item-description">
+                                Espresso, steamed milk & velvety foam
+                            </div>
+                        </div>
+
+                        <div class="price">ETB 150</div>
+
+                    </div>
+
+
+                    <div class="menu-item">
+
+                        <div>
+                            <div class="item-name">
+                                Latte
+                            </div>
+
+                            <div class="item-description">
+                                Smooth espresso with silky steamed milk
+                            </div>
+                        </div>
+
+                        <div class="price">ETB 160</div>
+
+                    </div>
+
+
+                    <div class="menu-item">
+
+                        <div>
+                            <div class="item-name">
+                                Flat White
+                            </div>
+
+                            <div class="item-description">
+                                Double espresso with silky microfoam
+                            </div>
+                        </div>
+
+                        <div class="price">ETB 160</div>
+
+                    </div>
+
+
+                    <div class="menu-item">
+
+                        <div>
+                            <div class="item-name">
+                                Mocha
+                            </div>
+
+                            <div class="item-description">
+                                Espresso with dark cocoa & warm milk
+                            </div>
+                        </div>
+
+                        <div class="price">ETB 170</div>
+
+                    </div>
+
+
+                    <div class="menu-item">
+
+                        <div>
+                            <div class="item-name">
+                                Americano
+                            </div>
+
+                            <div class="item-description">
+                                Espresso with hot water
+                            </div>
+                        </div>
+
+                        <div class="price">ETB 120</div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 TEA & DRINKS
+            ================================================== -->
+
+            <article class="menu-column">
+
+                <div class="category-image">
+
+                    <img
+                        src="assets/coffee.jpg"
+                        alt="Tea and Drinks">
+
+                    <div class="category-label">
+
+                        <small>Refresh & Relax</small>
+
+                        <h2>TEA & DRINKS</h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="items">
+
+
+                    <div class="menu-item">
+
+                        <div>
+                            <div class="item-name">
+                                Ethiopian Tea
+                            </div>
+
+                            <div class="item-description">
+                                Traditional black tea with cinnamon & cloves
+                            </div>
+                        </div>
+
+                        <div class="price">ETB 100</div>
+
+                    </div>
+
+
+                    <div class="menu-item">
+
+                        <div>
+                            <div class="item-name">
+                                Lemon Tea
+                            </div>
+
+                            <div class="item-description">
+                                Black tea with fresh citrus lemon
+                            </div>
+                        </div>
+
+                        <div class="price">ETB 110</div>
+
+                    </div>
+
+
+                    <div class="menu-item">
+
+                        <div>
+                            <div class="item-name">
+                                Ginger Tea
+                            </div>
+
+                            <div class="item-description">
+                                Fresh crushed ginger root tea
+                            </div>
+                        </div>
+
+                        <div class="price">ETB 110</div>
+
+                    </div>
+
+
+                    <div class="menu-item">
+
+                        <div>
+                            <div class="item-name">
+                                Green Tea
+                            </div>
+
+                            <div class="item-description">
+                                Light and refreshing whole-leaf tea
+                            </div>
+                        </div>
+
+                        <div class="price">ETB 110</div>
+
+                    </div>
+
+
+                    <div class="menu-item">
+
+                        <div>
+                            <div class="item-name">
+                                Coca-Cola
+                            </div>
+
+                            <div class="item-description">
+                                Chilled soft drink
+                            </div>
+                        </div>
+
+                        <div class="price">ETB 80</div>
+
+                    </div>
+
+
+                    <div class="menu-item">
+
+                        <div>
+                            <div class="item-name">
+                                Fanta
+                            </div>
+
+                            <div class="item-description">
+                                Chilled soft drink
+                            </div>
+                        </div>
+
+                        <div class="price">ETB 80</div>
+
+                    </div>
+
+
+                    <div class="menu-item">
+
+                        <div>
+                            <div class="item-name">
+                                Sprite
+                            </div>
+
+                            <div class="item-description">
+                                Chilled soft drink
+                            </div>
+                        </div>
+
+                        <div class="price">ETB 80</div>
+
+                    </div>
+
+
+                    <div class="menu-item">
+
+                        <div>
+                            <div class="item-name">
+                                Bottled Water
+                            </div>
+
+                            <div class="item-description">
+                                500ml still mineral water
+                            </div>
+                        </div>
+
+                        <div class="price">ETB 60</div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- =====================================================
+             FOOTER
+        ====================================================== -->
+
+        <footer class="footer">
+
+            <div class="footer-left">
+                <strong>YOHANAN COFFEE</strong>
+                &nbsp; • &nbsp;
+                COFFEE • BREAKFAST • MOMENTS
             </div>
-            <div class="clock-display" id="clock">12:00:00 PM</div>
+
+            <div class="footer-center">
+                Made with care in Addis Ababa
+            </div>
+
+            <div
+                class="clock"
+                id="clock">
+                00:00:00
+            </div>
+
         </footer>
-    </div>
 
-    <!-- JavaScript for Clock & Fullscreen Controls -->
+    </main>
+
+
     <script>
-        // Digital Clock Functionality
+
+        /* =====================================================
+           DATE & CLOCK
+        ====================================================== */
+
         function updateClock() {
+
             const now = new Date();
-            let hours = now.getHours();
-            const minutes = String(now.getMinutes()).padStart(2, '0');
-            const seconds = String(now.getSeconds()).padStart(2, '0');
-            const ampm = hours >= 12 ? 'PM' : 'AM';
-            hours = hours % 12;
-            hours = hours ? hours : 12; // convert 0 to 12
-            const timeString = `${String(hours).padStart(2, '0')}:${minutes}:${seconds} ${ampm}`;
 
-            const options = { weekday: 'short', month: 'short', day: 'numeric' };
-            const dateString = now.toLocaleDateString('en-US', options);
+            const dateOptions = {
+                weekday: "long",
+                month: "short",
+                day: "numeric",
+                year: "numeric"
+            };
 
-            document.getElementById('clock').textContent = `${dateString} | ${timeString}`;
+            const dateString = now.toLocaleDateString(
+                "en-US",
+                dateOptions
+            );
+
+            const timeString = now.toLocaleTimeString(
+                "en-US",
+                {
+                    hour: "2-digit",
+                    minute: "2-digit",
+                    second: "2-digit",
+                    hour12: true
+                }
+            );
+
+            document.getElementById("today").textContent =
+                dateString;
+
+            document.getElementById("clock").textContent =
+                timeString;
         }
-        setInterval(updateClock, 1000);
+
         updateClock();
 
-        // Fullscreen Toggle
-        const fullscreenBtn = document.getElementById('fullscreenToggle');
-        const expandIcon = document.getElementById('expandIcon');
-        const collapseIcon = document.getElementById('collapseIcon');
+        setInterval(updateClock, 1000);
 
-        fullscreenBtn.addEventListener('click', () => {
-            if (!document.fullscreenElement) {
-                document.documentElement.requestFullscreen().catch(err => {
-                    console.error(`Error attempting to enable fullscreen: ${err.message}`);
-                });
-            } else {
-                if (document.exitFullscreen) {
-                    document.exitFullscreen();
+
+        /* =====================================================
+           FULLSCREEN
+        ====================================================== */
+
+        const fullscreenBtn =
+            document.getElementById("fullscreenBtn");
+
+        const expandIcon =
+            document.getElementById("expandIcon");
+
+        const collapseIcon =
+            document.getElementById("collapseIcon");
+
+
+        fullscreenBtn.addEventListener("click", async () => {
+
+            try {
+
+                if (!document.fullscreenElement) {
+
+                    await document.documentElement.requestFullscreen();
+
+                } else {
+
+                    await document.exitFullscreen();
+
                 }
+
+            } catch (error) {
+
+                console.log(
+                    "Fullscreen unavailable:",
+                    error
+                );
+
             }
+
         });
 
-        document.addEventListener('fullscreenchange', () => {
+
+        /* =====================================================
+           FULLSCREEN ICON
+        ====================================================== */
+
+        function updateFullscreenIcon() {
+
             if (document.fullscreenElement) {
-                expandIcon.style.display = 'none';
-                collapseIcon.style.display = 'block';
-            } else {
-                expandIcon.style.display = 'block';
-                collapseIcon.style.display = 'none';
-            }
-        });
-    </script>
-</body>
 
+                expandIcon.style.display = "none";
+                collapseIcon.style.display = "block";
+
+            } else {
+
+                expandIcon.style.display = "block";
+                collapseIcon.style.display = "none";
+
+            }
+
+        }
+
+        document.addEventListener(
+            "fullscreenchange",
+            updateFullscreenIcon
+        );
+
+    </script>
+
+</body>
 </html>
+
